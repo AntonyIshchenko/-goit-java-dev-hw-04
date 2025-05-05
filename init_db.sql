@@ -32,6 +32,8 @@ CREATE TABLE IF NOT EXISTS project_worker (
     project_id BIGINT,
     worker_id BIGINT,
 
+    PRIMARY KEY (project_id, worker_id)
+
     CONSTRAINT project_id_fk FOREIGN KEY (project_id) REFERENCES project(id),
     CONSTRAINT worker_id_fk FOREIGN KEY (worker_id) REFERENCES worker(id)
 );
